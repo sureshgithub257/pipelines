@@ -1,0 +1,5 @@
+node {
+    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'cloud_user']]) {
+        sh 'aws s3 ls'  // Example AWS CLI command
+    }
+}
